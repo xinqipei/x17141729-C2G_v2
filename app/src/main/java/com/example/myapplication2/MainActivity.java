@@ -104,7 +104,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if(user !=null){
 
                             Log.i("signup", "Login successful");
+
+                            Intent SignUp = new Intent(MainActivity.this, SignUp.class);//redirecting to the users profile
+
+                           startActivity(SignUp);
+
+                            finish();
                         }
+
+
 
                         else{
                             Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
